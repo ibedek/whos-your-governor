@@ -1,0 +1,6 @@
+{
+    "scss.lint.important": "error",
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "es5",
+    "prettier.resolveGlobalModules": true
+}
