@@ -1,0 +1,31 @@
+.inlay {
+  background-color: rgb(102, 92, 255);
+  max-width: 60%;
+  color: white;
+  padding: 1.5rem 0.5rem;
+  margin-top: 6rem;
+}
+
+.form-column {
+  div {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 1rem;
+  }
+
+  label,
+  input {
+    color: rgb(102, 92, 255);
+    display: grid;
+    width: 50%;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    border-bottom: 2px solid rgb(102, 92, 255);
+    padding: 0.2;
+  }
+}

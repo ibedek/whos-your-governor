@@ -1,0 +1,69 @@
+.mat-toolbar {
+  background-color: transparent;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+.logo {
+  background-image: url(/assets/logo.svg) no-repeat;
+}
+
+.content {
+  min-height: 60vh;
+}
+
+button {
+  border: 0 none;
+  border-radius: 0;
+  padding: 0.5rem 1.5rem;
+  margin-left: 1rem;
+  color: white;
+  line-height: 1;
+
+  &.active {
+    border: 1px solid white;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+footer {
+  background: rgb(62, 60, 97);
+  padding: 1.5rem 1rem;
+  margin-top: 6rem;
+
+  h5 {
+    color: white;
+  }
+  h6 {
+    color: rgb(108, 99, 255);
+    font-weight: bold;
+  }
+}
+
+.page-title {
+  margin-top: 6rem;
+  max-width: 50%;
+
+  span {
+    display: inline-block;
+    background: rgb(108, 99, 255);
+    width: 4rem;
+    height: 0.5rem;
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 3.5rem;
+
+    strong {
+      font-weight: 700;
+      font-size: 4rem;
+      color: rgb(108, 99, 255);
+    }
+  }
+}

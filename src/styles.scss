@@ -1,3 +1,4 @@
+@import '~normalize.css';
 @import '~@angular/material/theming';
 @include mat-core();
 $candy-app-primary: mat-palette($mat-indigo);
@@ -9,3 +10,118 @@ $candy-app-theme: mat-light-theme(
   $candy-app-warn
 );
 @include angular-material-theme($candy-app-theme);
+
+body {
+  background: url(/assets/background.png) no-repeat right top;
+  background-size: 50%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h5,
+h6 {
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+  text-transform: lowercase;
+}
+.text-center {
+  text-align: center;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: minmax(33%, 1fr) minmax(33%, 1fr) minmax(33%, 1fr);
+}
+
+.px-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.w-50 {
+  max-width: 65%;
+}
+
+.search-box {
+  .mat-form-field-underline {
+    display: none;
+  }
+
+  .mat-form-field-label {
+    top: 45%;
+    left: 0.25rem;
+
+    color: rgba(107, 98, 255, 0.7);
+  }
+
+  button {
+    margin-left: 1rem;
+    line-height: 1;
+    padding: 0.25rem 1rem;
+    background: rgba(107, 98, 255);
+    border-radius: 0;
+    color: white;
+    height: 36px;
+    margin-top: 18px;
+  }
+}
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.details {
+  max-width: 80%;
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .w-50 {
+    max-width: 100%;
+  }
+  .grid-row {
+    display: block;
+
+    div {
+      text-align: center;
+    }
+  }
+
+  h5 {
+    margin-bottom: 1rem;
+  }
+  h6 {
+    margin-bottom: 0.5rem;
+  }
+
+  .details {
+    width: 100%;
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+}

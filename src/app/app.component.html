@@ -1,6 +1,57 @@
-<header>
+<header class="container">
   <mat-toolbar>
-    <button mat-stroked-button color="primary">EN</button>
-    <button mat-stroked-button color="primary">HR</button>
+    <button mat-flat-button><img src="assets/logo.png" /></button>
+
+    <div class="spacer"></div>
+
+    <button
+      mat-stroked-button
+      [ngClass]="{ active: selectedLanguage == 'en' }"
+      (click)="changeLanguage('en')"
+    >
+      EN
+    </button>
+    <button
+      mat-stroked-button
+      [ngClass]="{ active: selectedLanguage == 'hr' }"
+      (click)="changeLanguage('hr')"
+    >
+      HR
+    </button>
   </mat-toolbar>
 </header>
+
+<div class="content">
+  <div class="container px-2">
+    <div class="page-title">
+      <span></span>
+      <h1>
+        {{ 'WHOS_YOUR' | translate }}
+        <strong> {{ 'GOVERNOR' | translate }}?</strong>
+      </h1>
+    </div>
+
+    <app-search (selectedValues)="onSubmitValues($event)"></app-search>
+  </div>
+
+  <app-details
+    [selectedValues]="selectedValues"
+    *ngIf="selectedValues"
+  ></app-details>
+</div>
+<footer>
+  <div class="container grid-row">
+    <div class="text-left">
+      <h6>www.probnizadatak.com</h6>
+      <h5>mail@probni.zadatak.com</h5>
+    </div>
+    <div class="text-center">
+      <h6>UHP DIGITAL</h6>
+      <h5>DARMSTADT / OSIJEK / ZAGREB</h5>
+    </div>
+    <div class="text-right">
+      <h6>{{ 'GOVERNOR' | translate }}</h6>
+      <h5>{{ 'TITLE' | translate }}</h5>
+    </div>
+  </div>
+</footer>

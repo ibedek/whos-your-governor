@@ -1,0 +1,51 @@
+<form [formGroup]="serachForm" class="w-50 search-box">
+  <div class="form-row">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="{{ 'COUNTY' | translate }}"
+        type="text"
+        [matAutocomplete]="countyAutocomplete"
+        formControlName="county"
+      />
+      <mat-autocomplete
+        #countyAutocomplete
+        (optionSelected)="onCountySelect($event.option.value)"
+        [displayWith]="displayFn"
+      >
+        <mat-option
+          *ngFor="let option of filteredCounties | async"
+          [value]="option"
+          >{{ option.name }}</mat-option
+        >
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  <div class="form-row">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="{{ 'TOWN_OR_COMMUNITY' | translate }}"
+        type="text"
+        [matAutocomplete]="communityAutocomplete"
+        formControlName="townCommunity"
+      />
+
+      <mat-autocomplete
+        #communityAutocomplete
+        (optionSelected)="onTownCommunitySelect($event.option.value)"
+        [displayWith]="displayFn"
+      >
+        <mat-option
+          *ngFor="let option of filteredTownsCommunities | async"
+          [value]="option"
+          >{{ option.name }}</mat-option
+        >
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <button mat-button (click)="submitValues()">
+      {{ 'SHOW_DETAILS' | translate }}
+    </button>
+  </div>
+</form>

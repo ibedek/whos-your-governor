@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  apiBaseUri: 'https://tehcon.com.hr/api/CroatiaTownAPI/',
+  apiBaseUri: 'https://tehcon.com.hr/api/CroatiaTownAPI',
   hmr: false,
   production: false,
 };

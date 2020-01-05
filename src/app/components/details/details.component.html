@@ -1,0 +1,55 @@
+<form [formGroup]="detailsForm" class="details">
+  <div class="inlay">
+    <div class="container">{{ 'DETAILS_FOR' | translate }} {{ f.name }}</div>
+  </div>
+
+  <div class="container">
+    <div class="form-row">
+      <div class="form-column">
+        <div>
+          <label for="">{{ 'GOVERNOR' | translate }}</label>
+          <input matInput type="text" formControlName="governor" />
+        </div>
+
+        <div>
+          <label for=""> {{ 'VICE_GOVERNOR' | translate }}</label>
+          <input matInput type="text" formControlName="viceGovernor" />
+        </div>
+
+        <div>
+          <label for="">{{ 'ADDRESS' | translate }}</label>
+          <input matInput type="text" formControlName="address" />
+        </div>
+
+        <div>
+          <label for="">{{ 'ZIP_CODE' | translate }}</label>
+          <input matInput type="text" formControlName="zipCode" />
+        </div>
+
+        <div>
+          <label for="">{{ 'COUNTRY' | translate }}</label>
+          <input matInput type="text" formControlName="country" />
+        </div>
+      </div>
+
+      <div class="form-column">
+        <div>
+          <label for="">{{ 'WEB' | translate }}</label>
+          <input matInput type="text" formControlName="web" />
+        </div>
+        <div>
+          <label for=""> {{ 'EMAIL' | translate }}</label>
+          <input matInput type="text" formControlName="email" />
+        </div>
+        <div>
+          <label for=""> {{ 'PHONE' | translate }}</label>
+          <input matInput type="text" formControlName="phone" />
+        </div>
+        <div>
+          <label for="">{{ 'FAX' | translate }}</label>
+          <input matInput type="text" formControlName="fax" />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
