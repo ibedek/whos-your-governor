@@ -13,5 +13,6 @@
   "WEB": "Web",
   "EMAIL": "Email",
   "PHONE": "Phone",
-  "FAX": "Fax"
+  "FAX": "Fax",
+  "NO_DATA": "No data found"
 }

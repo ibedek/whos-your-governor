@@ -27,6 +27,8 @@ export class DetailsComponent implements OnInit, OnDestroy, OnChanges {
     zipCode: new FormControl({ value: '', disabled: true }),
   });
 
+  public hasError = false;
+
   constructor(
     private formBuilder: FormBuilder,
     private townsService: CroatiaTownsService,
@@ -54,9 +56,11 @@ export class DetailsComponent implements OnInit, OnDestroy, OnChanges {
       .subscribe(
         res => {
           this.detailsForm.patchValue(res);
+          this.hasError = false;
         },
         err => {
-          console.log(err);
+          // console.log(err);
+          this.hasError = true;
         },
       );
   }

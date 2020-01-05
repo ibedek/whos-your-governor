@@ -13,5 +13,6 @@
   "WEB": "Web",
   "EMAIL": "Email",
   "PHONE": "Telefon",
-  "FAX": "Fax"
+  "FAX": "Fax",
+  "NO_DATA": "Nema podataka"
 }

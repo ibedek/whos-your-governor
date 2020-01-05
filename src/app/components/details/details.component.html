@@ -1,4 +1,4 @@
-<form [formGroup]="detailsForm" class="details">
+<form [formGroup]="detailsForm" class="details" *ngIf="!hasError">
   <div class="inlay">
     <div class="container">{{ 'DETAILS_FOR' | translate }} {{ f.name }}</div>
   </div>
@@ -53,3 +53,7 @@
     </div>
   </div>
 </form>
+
+<div class="container" *ngIf="hasError">
+  <h2>{{ 'NO_DATA' | translate }}</h2>
+</div>
